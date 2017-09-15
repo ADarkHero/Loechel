@@ -36,6 +36,8 @@ Partial Class mainForm
         Me.openLoechelShop = New System.Windows.Forms.Button()
         Me.tabControl = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.openProjectsFolder = New System.Windows.Forms.Button()
+        Me.openAmazonScriptPath = New System.Windows.Forms.Button()
         Me.startBreak = New System.Windows.Forms.Button()
         Me.openPasswordList = New System.Windows.Forms.Button()
         Me.addLoechelPics = New System.Windows.Forms.Button()
@@ -53,6 +55,7 @@ Partial Class mainForm
         Me.noteEditor = New System.Windows.Forms.TextBox()
         Me.saveNotes = New System.Windows.Forms.Button()
         Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
+        Me.openAmazonPriceCalculator = New System.Windows.Forms.Button()
         Me.tabControl.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -132,9 +135,9 @@ Partial Class mainForm
         '
         Me.startEnventa.BackColor = System.Drawing.Color.LightBlue
         Me.startEnventa.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.startEnventa.Location = New System.Drawing.Point(724, 531)
+        Me.startEnventa.Location = New System.Drawing.Point(718, 531)
         Me.startEnventa.Name = "startEnventa"
-        Me.startEnventa.Size = New System.Drawing.Size(250, 100)
+        Me.startEnventa.Size = New System.Drawing.Size(256, 100)
         Me.startEnventa.TabIndex = 6
         Me.startEnventa.Text = "eNVenta starten"
         Me.startEnventa.UseVisualStyleBackColor = False
@@ -143,9 +146,9 @@ Partial Class mainForm
         '
         Me.startEnventaTest.BackColor = System.Drawing.Color.LightBlue
         Me.startEnventaTest.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.startEnventaTest.Location = New System.Drawing.Point(724, 465)
+        Me.startEnventaTest.Location = New System.Drawing.Point(718, 465)
         Me.startEnventaTest.Name = "startEnventaTest"
-        Me.startEnventaTest.Size = New System.Drawing.Size(250, 60)
+        Me.startEnventaTest.Size = New System.Drawing.Size(256, 60)
         Me.startEnventaTest.TabIndex = 7
         Me.startEnventaTest.Text = "eNVenta Testsystem"
         Me.startEnventaTest.UseVisualStyleBackColor = False
@@ -154,9 +157,9 @@ Partial Class mainForm
         '
         Me.openAmazon.BackColor = System.Drawing.Color.DarkOrange
         Me.openAmazon.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.openAmazon.Location = New System.Drawing.Point(6, 571)
+        Me.openAmazon.Location = New System.Drawing.Point(3, 571)
         Me.openAmazon.Name = "openAmazon"
-        Me.openAmazon.Size = New System.Drawing.Size(122, 60)
+        Me.openAmazon.Size = New System.Drawing.Size(185, 60)
         Me.openAmazon.TabIndex = 8
         Me.openAmazon.Text = "Amazon Händlerportal"
         Me.openAmazon.UseVisualStyleBackColor = False
@@ -165,11 +168,11 @@ Partial Class mainForm
         '
         Me.openAmazonCalculator.BackColor = System.Drawing.Color.DarkOrange
         Me.openAmazonCalculator.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.openAmazonCalculator.Location = New System.Drawing.Point(134, 571)
+        Me.openAmazonCalculator.Location = New System.Drawing.Point(285, 571)
         Me.openAmazonCalculator.Name = "openAmazonCalculator"
-        Me.openAmazonCalculator.Size = New System.Drawing.Size(122, 60)
+        Me.openAmazonCalculator.Size = New System.Drawing.Size(91, 60)
         Me.openAmazonCalculator.TabIndex = 9
-        Me.openAmazonCalculator.Text = "Amazon Rechner"
+        Me.openAmazonCalculator.Text = "Amazon Rechner Excel"
         Me.openAmazonCalculator.UseVisualStyleBackColor = False
         '
         'openLoechelShop
@@ -177,7 +180,7 @@ Partial Class mainForm
         Me.openLoechelShop.BackColor = System.Drawing.Color.CornflowerBlue
         Me.openLoechelShop.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.openLoechelShop.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.openLoechelShop.Location = New System.Drawing.Point(6, 465)
+        Me.openLoechelShop.Location = New System.Drawing.Point(3, 425)
         Me.openLoechelShop.Name = "openLoechelShop"
         Me.openLoechelShop.Size = New System.Drawing.Size(250, 100)
         Me.openLoechelShop.TabIndex = 10
@@ -196,6 +199,9 @@ Partial Class mainForm
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.openAmazonPriceCalculator)
+        Me.TabPage1.Controls.Add(Me.openProjectsFolder)
+        Me.TabPage1.Controls.Add(Me.openAmazonScriptPath)
         Me.TabPage1.Controls.Add(Me.startBreak)
         Me.TabPage1.Controls.Add(Me.openPasswordList)
         Me.TabPage1.Controls.Add(Me.addLoechelPics)
@@ -222,11 +228,33 @@ Partial Class mainForm
         Me.TabPage1.Text = "Home"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
+        'openProjectsFolder
+        '
+        Me.openProjectsFolder.BackColor = System.Drawing.Color.Gold
+        Me.openProjectsFolder.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.openProjectsFolder.Location = New System.Drawing.Point(382, 531)
+        Me.openProjectsFolder.Name = "openProjectsFolder"
+        Me.openProjectsFolder.Size = New System.Drawing.Size(330, 34)
+        Me.openProjectsFolder.TabIndex = 21
+        Me.openProjectsFolder.Text = "Projects Folder"
+        Me.openProjectsFolder.UseVisualStyleBackColor = False
+        '
+        'openAmazonScriptPath
+        '
+        Me.openAmazonScriptPath.BackColor = System.Drawing.Color.DarkOrange
+        Me.openAmazonScriptPath.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.openAmazonScriptPath.Location = New System.Drawing.Point(191, 531)
+        Me.openAmazonScriptPath.Name = "openAmazonScriptPath"
+        Me.openAmazonScriptPath.Size = New System.Drawing.Size(185, 34)
+        Me.openAmazonScriptPath.TabIndex = 19
+        Me.openAmazonScriptPath.Text = "Script Path"
+        Me.openAmazonScriptPath.UseVisualStyleBackColor = False
+        '
         'startBreak
         '
         Me.startBreak.BackColor = System.Drawing.Color.MediumSeaGreen
         Me.startBreak.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.startBreak.Location = New System.Drawing.Point(388, 531)
+        Me.startBreak.Location = New System.Drawing.Point(382, 491)
         Me.startBreak.Name = "startBreak"
         Me.startBreak.Size = New System.Drawing.Size(330, 34)
         Me.startBreak.TabIndex = 18
@@ -237,9 +265,9 @@ Partial Class mainForm
         '
         Me.openPasswordList.BackColor = System.Drawing.Color.MediumSpringGreen
         Me.openPasswordList.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.openPasswordList.Location = New System.Drawing.Point(724, 429)
+        Me.openPasswordList.Location = New System.Drawing.Point(718, 429)
         Me.openPasswordList.Name = "openPasswordList"
-        Me.openPasswordList.Size = New System.Drawing.Size(250, 30)
+        Me.openPasswordList.Size = New System.Drawing.Size(256, 30)
         Me.openPasswordList.TabIndex = 17
         Me.openPasswordList.Text = "DIE LISTE!"
         Me.openPasswordList.UseVisualStyleBackColor = False
@@ -249,7 +277,7 @@ Partial Class mainForm
         Me.addLoechelPics.BackColor = System.Drawing.Color.CornflowerBlue
         Me.addLoechelPics.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.addLoechelPics.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.addLoechelPics.Location = New System.Drawing.Point(262, 465)
+        Me.addLoechelPics.Location = New System.Drawing.Point(256, 425)
         Me.addLoechelPics.Name = "addLoechelPics"
         Me.addLoechelPics.Size = New System.Drawing.Size(120, 100)
         Me.addLoechelPics.TabIndex = 16
@@ -260,11 +288,11 @@ Partial Class mainForm
         '
         Me.amazonOrders.BackColor = System.Drawing.Color.DarkOrange
         Me.amazonOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.amazonOrders.Location = New System.Drawing.Point(262, 571)
+        Me.amazonOrders.Location = New System.Drawing.Point(3, 531)
         Me.amazonOrders.Name = "amazonOrders"
-        Me.amazonOrders.Size = New System.Drawing.Size(120, 60)
+        Me.amazonOrders.Size = New System.Drawing.Size(185, 34)
         Me.amazonOrders.TabIndex = 15
-        Me.amazonOrders.Text = "Amazon Bestellungen Import Script"
+        Me.amazonOrders.Text = "Bestellungen Script starten"
         Me.amazonOrders.UseVisualStyleBackColor = False
         '
         'uploadAvailability
@@ -283,7 +311,7 @@ Partial Class mainForm
         Me.mercateoLieferzeiten.BackColor = System.Drawing.Color.Salmon
         Me.mercateoLieferzeiten.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.mercateoLieferzeiten.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.mercateoLieferzeiten.Location = New System.Drawing.Point(6, 429)
+        Me.mercateoLieferzeiten.Location = New System.Drawing.Point(0, 389)
         Me.mercateoLieferzeiten.Name = "mercateoLieferzeiten"
         Me.mercateoLieferzeiten.Size = New System.Drawing.Size(376, 30)
         Me.mercateoLieferzeiten.TabIndex = 13
@@ -295,7 +323,7 @@ Partial Class mainForm
         Me.accessODBC.BackColor = System.Drawing.Color.Orchid
         Me.accessODBC.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.accessODBC.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.accessODBC.Location = New System.Drawing.Point(388, 571)
+        Me.accessODBC.Location = New System.Drawing.Point(382, 571)
         Me.accessODBC.Name = "accessODBC"
         Me.accessODBC.Size = New System.Drawing.Size(330, 60)
         Me.accessODBC.TabIndex = 12
@@ -388,6 +416,17 @@ Partial Class mainForm
         Me.MonthCalendar1.Name = "MonthCalendar1"
         Me.MonthCalendar1.TabIndex = 0
         '
+        'openAmazonPriceCalculator
+        '
+        Me.openAmazonPriceCalculator.BackColor = System.Drawing.Color.DarkOrange
+        Me.openAmazonPriceCalculator.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.openAmazonPriceCalculator.Location = New System.Drawing.Point(191, 571)
+        Me.openAmazonPriceCalculator.Name = "openAmazonPriceCalculator"
+        Me.openAmazonPriceCalculator.Size = New System.Drawing.Size(91, 60)
+        Me.openAmazonPriceCalculator.TabIndex = 22
+        Me.openAmazonPriceCalculator.Text = "Amazon Rechner"
+        Me.openAmazonPriceCalculator.UseVisualStyleBackColor = False
+        '
         'mainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -439,4 +478,7 @@ Partial Class mainForm
     Friend WithEvents openNumberpassTxt As Button
     Friend WithEvents readNumberpassTxt As Button
     Friend WithEvents startBreak As Button
+    Friend WithEvents openAmazonScriptPath As Button
+    Friend WithEvents openProjectsFolder As Button
+    Friend WithEvents openAmazonPriceCalculator As Button
 End Class

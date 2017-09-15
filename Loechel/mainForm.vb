@@ -121,7 +121,7 @@ Public Class mainForm
     End Sub
 
     Private Sub amazonOrders_Click(sender As Object, e As EventArgs) Handles amazonOrders.Click
-        Process.Start("http://shopware.adarkhero.at/backend/ConnectorAmazonApi/importOrder?key=A8MBVEK09P7II")
+        Process.Start(autoPath + "Projects\AmazonTranslator\AmazonTranslator\bin\Debug\AmazonTranslatorManual.exe")
     End Sub
 
     Private Sub addLoechelPics_Click(sender As Object, e As EventArgs) Handles addLoechelPics.Click
@@ -148,10 +148,18 @@ Public Class mainForm
     End Sub
 
     Private Sub startBreak_Click(sender As Object, e As EventArgs) Handles startBreak.Click
-        Dim myProcess As New Process
-        myProcess.StartInfo.WorkingDirectory = "c:\program files (x86)\gog galaxy\games\gwent"
-        myProcess.StartInfo.FileName = "C:\Program Files (x86)\GOG Galaxy\Games\Gwent\Gwent.exe"
-        myProcess.Start()
+        Process.Start("C:\Program Files (x86)\GOG Galaxy\GalaxyClient.exe")
     End Sub
 
+    Private Sub openAmazonScriptPath_Click(sender As Object, e As EventArgs) Handles openAmazonScriptPath.Click
+        Process.Start("V:\BMECat\Amazon\Test")
+    End Sub
+
+    Private Sub openProjectsFolder_Click(sender As Object, e As EventArgs) Handles openProjectsFolder.Click
+        Process.Start(autoPath + "Projects")
+    End Sub
+
+    Private Sub openAmazonPriceCalculator_Click(sender As Object, e As EventArgs) Handles openAmazonPriceCalculator.Click
+        Process.Start(autoPath + "Projects\AmazonPreise\AmazonPreise\bin\Debug\AmazonPriceCalculator.exe")
+    End Sub
 End Class
