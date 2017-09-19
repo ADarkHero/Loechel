@@ -36,6 +36,7 @@ Partial Class mainForm
         Me.openLoechelShop = New System.Windows.Forms.Button()
         Me.tabControl = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.openAmazonPriceCalculator = New System.Windows.Forms.Button()
         Me.openProjectsFolder = New System.Windows.Forms.Button()
         Me.openAmazonScriptPath = New System.Windows.Forms.Button()
         Me.startBreak = New System.Windows.Forms.Button()
@@ -55,7 +56,7 @@ Partial Class mainForm
         Me.noteEditor = New System.Windows.Forms.TextBox()
         Me.saveNotes = New System.Windows.Forms.Button()
         Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
-        Me.openAmazonPriceCalculator = New System.Windows.Forms.Button()
+        Me.openTextSplitter = New System.Windows.Forms.Button()
         Me.tabControl.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -180,7 +181,7 @@ Partial Class mainForm
         Me.openLoechelShop.BackColor = System.Drawing.Color.CornflowerBlue
         Me.openLoechelShop.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.openLoechelShop.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.openLoechelShop.Location = New System.Drawing.Point(3, 425)
+        Me.openLoechelShop.Location = New System.Drawing.Point(0, 385)
         Me.openLoechelShop.Name = "openLoechelShop"
         Me.openLoechelShop.Size = New System.Drawing.Size(250, 100)
         Me.openLoechelShop.TabIndex = 10
@@ -199,6 +200,7 @@ Partial Class mainForm
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.openTextSplitter)
         Me.TabPage1.Controls.Add(Me.openAmazonPriceCalculator)
         Me.TabPage1.Controls.Add(Me.openProjectsFolder)
         Me.TabPage1.Controls.Add(Me.openAmazonScriptPath)
@@ -227,6 +229,17 @@ Partial Class mainForm
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Home"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'openAmazonPriceCalculator
+        '
+        Me.openAmazonPriceCalculator.BackColor = System.Drawing.Color.DarkOrange
+        Me.openAmazonPriceCalculator.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.openAmazonPriceCalculator.Location = New System.Drawing.Point(191, 571)
+        Me.openAmazonPriceCalculator.Name = "openAmazonPriceCalculator"
+        Me.openAmazonPriceCalculator.Size = New System.Drawing.Size(91, 60)
+        Me.openAmazonPriceCalculator.TabIndex = 22
+        Me.openAmazonPriceCalculator.Text = "Amazon Rechner"
+        Me.openAmazonPriceCalculator.UseVisualStyleBackColor = False
         '
         'openProjectsFolder
         '
@@ -277,7 +290,7 @@ Partial Class mainForm
         Me.addLoechelPics.BackColor = System.Drawing.Color.CornflowerBlue
         Me.addLoechelPics.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.addLoechelPics.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.addLoechelPics.Location = New System.Drawing.Point(256, 425)
+        Me.addLoechelPics.Location = New System.Drawing.Point(256, 385)
         Me.addLoechelPics.Name = "addLoechelPics"
         Me.addLoechelPics.Size = New System.Drawing.Size(120, 100)
         Me.addLoechelPics.TabIndex = 16
@@ -311,7 +324,7 @@ Partial Class mainForm
         Me.mercateoLieferzeiten.BackColor = System.Drawing.Color.Salmon
         Me.mercateoLieferzeiten.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.mercateoLieferzeiten.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.mercateoLieferzeiten.Location = New System.Drawing.Point(0, 389)
+        Me.mercateoLieferzeiten.Location = New System.Drawing.Point(0, 349)
         Me.mercateoLieferzeiten.Name = "mercateoLieferzeiten"
         Me.mercateoLieferzeiten.Size = New System.Drawing.Size(376, 30)
         Me.mercateoLieferzeiten.TabIndex = 13
@@ -416,16 +429,17 @@ Partial Class mainForm
         Me.MonthCalendar1.Name = "MonthCalendar1"
         Me.MonthCalendar1.TabIndex = 0
         '
-        'openAmazonPriceCalculator
+        'openTextSplitter
         '
-        Me.openAmazonPriceCalculator.BackColor = System.Drawing.Color.DarkOrange
-        Me.openAmazonPriceCalculator.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.openAmazonPriceCalculator.Location = New System.Drawing.Point(191, 571)
-        Me.openAmazonPriceCalculator.Name = "openAmazonPriceCalculator"
-        Me.openAmazonPriceCalculator.Size = New System.Drawing.Size(91, 60)
-        Me.openAmazonPriceCalculator.TabIndex = 22
-        Me.openAmazonPriceCalculator.Text = "Amazon Rechner"
-        Me.openAmazonPriceCalculator.UseVisualStyleBackColor = False
+        Me.openTextSplitter.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.openTextSplitter.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.openTextSplitter.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.openTextSplitter.Location = New System.Drawing.Point(0, 491)
+        Me.openTextSplitter.Name = "openTextSplitter"
+        Me.openTextSplitter.Size = New System.Drawing.Size(376, 34)
+        Me.openTextSplitter.TabIndex = 23
+        Me.openTextSplitter.Text = "Text Splitter"
+        Me.openTextSplitter.UseVisualStyleBackColor = False
         '
         'mainForm
         '
@@ -481,4 +495,5 @@ Partial Class mainForm
     Friend WithEvents openAmazonScriptPath As Button
     Friend WithEvents openProjectsFolder As Button
     Friend WithEvents openAmazonPriceCalculator As Button
+    Friend WithEvents openTextSplitter As Button
 End Class

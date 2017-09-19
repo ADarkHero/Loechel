@@ -162,4 +162,8 @@ Public Class mainForm
     Private Sub openAmazonPriceCalculator_Click(sender As Object, e As EventArgs) Handles openAmazonPriceCalculator.Click
         Process.Start(autoPath + "Projects\AmazonPreise\AmazonPreise\bin\Debug\AmazonPriceCalculator.exe")
     End Sub
+
+    Private Sub openTextSplitter_Click(sender As Object, e As EventArgs) Handles openTextSplitter.Click
+        Process.Start(autoPath + "Projects\TextSplitter\TextSplitter\bin\Debug\TextSplitter.exe")
+    End Sub
 End Class
