@@ -35,7 +35,8 @@ Partial Class mainForm
         Me.openAmazonCalculator = New System.Windows.Forms.Button()
         Me.openLoechelShop = New System.Windows.Forms.Button()
         Me.tabControl = New System.Windows.Forms.TabControl()
-        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.tabPageHome = New System.Windows.Forms.TabPage()
+        Me.openTextSplitter = New System.Windows.Forms.Button()
         Me.openAmazonPriceCalculator = New System.Windows.Forms.Button()
         Me.openProjectsFolder = New System.Windows.Forms.Button()
         Me.openAmazonScriptPath = New System.Windows.Forms.Button()
@@ -46,21 +47,30 @@ Partial Class mainForm
         Me.uploadAvailability = New System.Windows.Forms.Button()
         Me.mercateoLieferzeiten = New System.Windows.Forms.Button()
         Me.accessODBC = New System.Windows.Forms.Button()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.tabPagePass = New System.Windows.Forms.TabPage()
         Me.readNumberpassTxt = New System.Windows.Forms.Button()
         Me.openNumberpassTxt = New System.Windows.Forms.Button()
         Me.numberpass = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.tabPageImport = New System.Windows.Forms.TabPage()
+        Me.importsDataGrid = New System.Windows.Forms.DataGridView()
         Me.noteEditor = New System.Windows.Forms.TextBox()
         Me.saveNotes = New System.Windows.Forms.Button()
         Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
-        Me.openTextSplitter = New System.Windows.Forms.Button()
+        Me.Size = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Importname = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Information = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.Vorbereitet = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.Schattenstamm = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.Komplett = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.tabControl.SuspendLayout()
-        Me.TabPage1.SuspendLayout()
-        Me.TabPage2.SuspendLayout()
+        Me.tabPageHome.SuspendLayout()
+        Me.tabPagePass.SuspendLayout()
         CType(Me.numberpass, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.tabPageImport.SuspendLayout()
+        CType(Me.importsDataGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'dailyTasks
@@ -190,45 +200,58 @@ Partial Class mainForm
         '
         'tabControl
         '
-        Me.tabControl.Controls.Add(Me.TabPage1)
-        Me.tabControl.Controls.Add(Me.TabPage2)
+        Me.tabControl.Controls.Add(Me.tabPageHome)
+        Me.tabControl.Controls.Add(Me.tabPagePass)
+        Me.tabControl.Controls.Add(Me.tabPageImport)
         Me.tabControl.Location = New System.Drawing.Point(12, 12)
         Me.tabControl.Name = "tabControl"
         Me.tabControl.SelectedIndex = 0
         Me.tabControl.Size = New System.Drawing.Size(988, 663)
         Me.tabControl.TabIndex = 11
         '
-        'TabPage1
+        'tabPageHome
         '
-        Me.TabPage1.Controls.Add(Me.openTextSplitter)
-        Me.TabPage1.Controls.Add(Me.openAmazonPriceCalculator)
-        Me.TabPage1.Controls.Add(Me.openProjectsFolder)
-        Me.TabPage1.Controls.Add(Me.openAmazonScriptPath)
-        Me.TabPage1.Controls.Add(Me.startBreak)
-        Me.TabPage1.Controls.Add(Me.openPasswordList)
-        Me.TabPage1.Controls.Add(Me.addLoechelPics)
-        Me.TabPage1.Controls.Add(Me.amazonOrders)
-        Me.TabPage1.Controls.Add(Me.uploadAvailability)
-        Me.TabPage1.Controls.Add(Me.mercateoLieferzeiten)
-        Me.TabPage1.Controls.Add(Me.accessODBC)
-        Me.TabPage1.Controls.Add(Me.dailyTasks)
-        Me.TabPage1.Controls.Add(Me.openAmazonCalculator)
-        Me.TabPage1.Controls.Add(Me.openLoechelShop)
-        Me.TabPage1.Controls.Add(Me.openAmazon)
-        Me.TabPage1.Controls.Add(Me.zipCatalog1955)
-        Me.TabPage1.Controls.Add(Me.zipCatalog2280)
-        Me.TabPage1.Controls.Add(Me.uploadCatalog1955)
-        Me.TabPage1.Controls.Add(Me.startEnventa)
-        Me.TabPage1.Controls.Add(Me.startEnventaTest)
-        Me.TabPage1.Controls.Add(Me.uploadCatalog2280)
-        Me.TabPage1.Controls.Add(Me.downloadPricereport)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(980, 637)
-        Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "Home"
-        Me.TabPage1.UseVisualStyleBackColor = True
+        Me.tabPageHome.Controls.Add(Me.openTextSplitter)
+        Me.tabPageHome.Controls.Add(Me.openAmazonPriceCalculator)
+        Me.tabPageHome.Controls.Add(Me.openProjectsFolder)
+        Me.tabPageHome.Controls.Add(Me.openAmazonScriptPath)
+        Me.tabPageHome.Controls.Add(Me.startBreak)
+        Me.tabPageHome.Controls.Add(Me.openPasswordList)
+        Me.tabPageHome.Controls.Add(Me.addLoechelPics)
+        Me.tabPageHome.Controls.Add(Me.amazonOrders)
+        Me.tabPageHome.Controls.Add(Me.uploadAvailability)
+        Me.tabPageHome.Controls.Add(Me.mercateoLieferzeiten)
+        Me.tabPageHome.Controls.Add(Me.accessODBC)
+        Me.tabPageHome.Controls.Add(Me.dailyTasks)
+        Me.tabPageHome.Controls.Add(Me.openAmazonCalculator)
+        Me.tabPageHome.Controls.Add(Me.openLoechelShop)
+        Me.tabPageHome.Controls.Add(Me.openAmazon)
+        Me.tabPageHome.Controls.Add(Me.zipCatalog1955)
+        Me.tabPageHome.Controls.Add(Me.zipCatalog2280)
+        Me.tabPageHome.Controls.Add(Me.uploadCatalog1955)
+        Me.tabPageHome.Controls.Add(Me.startEnventa)
+        Me.tabPageHome.Controls.Add(Me.startEnventaTest)
+        Me.tabPageHome.Controls.Add(Me.uploadCatalog2280)
+        Me.tabPageHome.Controls.Add(Me.downloadPricereport)
+        Me.tabPageHome.Location = New System.Drawing.Point(4, 22)
+        Me.tabPageHome.Name = "tabPageHome"
+        Me.tabPageHome.Padding = New System.Windows.Forms.Padding(3)
+        Me.tabPageHome.Size = New System.Drawing.Size(980, 637)
+        Me.tabPageHome.TabIndex = 0
+        Me.tabPageHome.Text = "Home"
+        Me.tabPageHome.UseVisualStyleBackColor = True
+        '
+        'openTextSplitter
+        '
+        Me.openTextSplitter.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.openTextSplitter.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.openTextSplitter.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.openTextSplitter.Location = New System.Drawing.Point(0, 491)
+        Me.openTextSplitter.Name = "openTextSplitter"
+        Me.openTextSplitter.Size = New System.Drawing.Size(376, 34)
+        Me.openTextSplitter.TabIndex = 23
+        Me.openTextSplitter.Text = "Text Splitter"
+        Me.openTextSplitter.UseVisualStyleBackColor = False
         '
         'openAmazonPriceCalculator
         '
@@ -343,18 +366,18 @@ Partial Class mainForm
         Me.accessODBC.Text = "Access ODBC"
         Me.accessODBC.UseVisualStyleBackColor = False
         '
-        'TabPage2
+        'tabPagePass
         '
-        Me.TabPage2.Controls.Add(Me.readNumberpassTxt)
-        Me.TabPage2.Controls.Add(Me.openNumberpassTxt)
-        Me.TabPage2.Controls.Add(Me.numberpass)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(980, 637)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "Nummern & Passwörter"
-        Me.TabPage2.UseVisualStyleBackColor = True
+        Me.tabPagePass.Controls.Add(Me.readNumberpassTxt)
+        Me.tabPagePass.Controls.Add(Me.openNumberpassTxt)
+        Me.tabPagePass.Controls.Add(Me.numberpass)
+        Me.tabPagePass.Location = New System.Drawing.Point(4, 22)
+        Me.tabPagePass.Name = "tabPagePass"
+        Me.tabPagePass.Padding = New System.Windows.Forms.Padding(3)
+        Me.tabPagePass.Size = New System.Drawing.Size(980, 637)
+        Me.tabPagePass.TabIndex = 1
+        Me.tabPagePass.Text = "Nummern & Passwörter"
+        Me.tabPagePass.UseVisualStyleBackColor = True
         '
         'readNumberpassTxt
         '
@@ -404,6 +427,25 @@ Partial Class mainForm
         Me.Column3.Name = "Column3"
         Me.Column3.Width = 505
         '
+        'tabPageImport
+        '
+        Me.tabPageImport.Controls.Add(Me.importsDataGrid)
+        Me.tabPageImport.Location = New System.Drawing.Point(4, 22)
+        Me.tabPageImport.Name = "tabPageImport"
+        Me.tabPageImport.Size = New System.Drawing.Size(980, 637)
+        Me.tabPageImport.TabIndex = 2
+        Me.tabPageImport.Text = "Imports"
+        Me.tabPageImport.UseVisualStyleBackColor = True
+        '
+        'importsDataGrid
+        '
+        Me.importsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.importsDataGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Size, Me.Importname, Me.Information, Me.Vorbereitet, Me.Schattenstamm, Me.Komplett})
+        Me.importsDataGrid.Location = New System.Drawing.Point(6, 6)
+        Me.importsDataGrid.Name = "importsDataGrid"
+        Me.importsDataGrid.Size = New System.Drawing.Size(968, 625)
+        Me.importsDataGrid.TabIndex = 0
+        '
         'noteEditor
         '
         Me.noteEditor.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -429,17 +471,47 @@ Partial Class mainForm
         Me.MonthCalendar1.Name = "MonthCalendar1"
         Me.MonthCalendar1.TabIndex = 0
         '
-        'openTextSplitter
+        'Size
         '
-        Me.openTextSplitter.BackColor = System.Drawing.Color.DeepSkyBlue
-        Me.openTextSplitter.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.openTextSplitter.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.openTextSplitter.Location = New System.Drawing.Point(0, 491)
-        Me.openTextSplitter.Name = "openTextSplitter"
-        Me.openTextSplitter.Size = New System.Drawing.Size(376, 34)
-        Me.openTextSplitter.TabIndex = 23
-        Me.openTextSplitter.Text = "Text Splitter"
-        Me.openTextSplitter.UseVisualStyleBackColor = False
+        Me.Size.HeaderText = "Size"
+        Me.Size.Name = "Size"
+        Me.Size.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        '
+        'Importname
+        '
+        Me.Importname.HeaderText = "Importname"
+        Me.Importname.Name = "Importname"
+        Me.Importname.Width = 325
+        '
+        'Information
+        '
+        Me.Information.HeaderText = "Information"
+        Me.Information.Items.AddRange(New Object() {"Access", "Kein Schattenstamm", "Massenänderung", "Wöchentlich", "Wöchentlich, kein Schattenstamm"})
+        Me.Information.Name = "Information"
+        Me.Information.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Information.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.Information.Width = 200
+        '
+        'Vorbereitet
+        '
+        Me.Vorbereitet.HeaderText = "Vorbereitet"
+        Me.Vorbereitet.Name = "Vorbereitet"
+        Me.Vorbereitet.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Vorbereitet.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        '
+        'Schattenstamm
+        '
+        Me.Schattenstamm.HeaderText = "Schattenstamm"
+        Me.Schattenstamm.Name = "Schattenstamm"
+        Me.Schattenstamm.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Schattenstamm.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        '
+        'Komplett
+        '
+        Me.Komplett.HeaderText = "Komplett"
+        Me.Komplett.Name = "Komplett"
+        Me.Komplett.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Komplett.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         '
         'mainForm
         '
@@ -454,9 +526,11 @@ Partial Class mainForm
         Me.Name = "mainForm"
         Me.Text = "Löchel Industriebedarf"
         Me.tabControl.ResumeLayout(False)
-        Me.TabPage1.ResumeLayout(False)
-        Me.TabPage2.ResumeLayout(False)
+        Me.tabPageHome.ResumeLayout(False)
+        Me.tabPagePass.ResumeLayout(False)
         CType(Me.numberpass, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.tabPageImport.ResumeLayout(False)
+        CType(Me.importsDataGrid, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -474,7 +548,7 @@ Partial Class mainForm
     Friend WithEvents openAmazonCalculator As Button
     Friend WithEvents openLoechelShop As Button
     Friend WithEvents tabControl As TabControl
-    Friend WithEvents TabPage1 As TabPage
+    Friend WithEvents tabPageHome As TabPage
     Friend WithEvents noteEditor As TextBox
     Friend WithEvents saveNotes As Button
     Friend WithEvents MonthCalendar1 As MonthCalendar
@@ -484,7 +558,7 @@ Partial Class mainForm
     Friend WithEvents amazonOrders As Button
     Friend WithEvents addLoechelPics As Button
     Friend WithEvents openPasswordList As Button
-    Friend WithEvents TabPage2 As TabPage
+    Friend WithEvents tabPagePass As TabPage
     Friend WithEvents numberpass As DataGridView
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
@@ -496,4 +570,12 @@ Partial Class mainForm
     Friend WithEvents openProjectsFolder As Button
     Friend WithEvents openAmazonPriceCalculator As Button
     Friend WithEvents openTextSplitter As Button
+    Friend WithEvents tabPageImport As TabPage
+    Friend WithEvents importsDataGrid As DataGridView
+    Friend WithEvents Size As DataGridViewTextBoxColumn
+    Friend WithEvents Importname As DataGridViewTextBoxColumn
+    Friend WithEvents Information As DataGridViewComboBoxColumn
+    Friend WithEvents Vorbereitet As DataGridViewCheckBoxColumn
+    Friend WithEvents Schattenstamm As DataGridViewCheckBoxColumn
+    Friend WithEvents Komplett As DataGridViewCheckBoxColumn
 End Class

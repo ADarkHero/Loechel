@@ -1,6 +1,4 @@
-﻿Imports System.ComponentModel
-
-Public Class mainForm
+﻿Public Class mainForm
 
     'Pfad, in dem die Dateien zur Automatisierung liegen
     Public Shared autoPath As String = "Z:\Automatisierung\"
@@ -27,6 +25,22 @@ Public Class mainForm
         Next
     End Sub
 
+    'Liest Daten für imports Feld
+    Private Sub readImports()
+        importsDataGrid.Rows.Clear()
+        Try
+            For Each ThisLine In My.Computer.FileSystem.ReadAllText(autoPath + "txt\imports.txt").Split(Environment.NewLine)
+
+                importsDataGrid.Rows.Add(Split(ThisLine, ControlChars.Tab))
+
+            Next
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+
+
     'Schreibt Daten von numberpass Feld in Textdatei
     Private Sub writeNumberpass()
         numberpass.ClipboardCopyMode = DataGridViewClipboardCopyMode.EnableWithoutHeaderText
@@ -38,6 +52,16 @@ Public Class mainForm
         numberpass.ClearSelection()
     End Sub
 
+    'Schreibt Daten von imports Feld in Textdatei
+    Private Sub writeImports()
+        importsDataGrid.ClipboardCopyMode = DataGridViewClipboardCopyMode.EnableWithoutHeaderText
+
+        importsDataGrid.SelectAll()
+
+        IO.File.WriteAllText(autoPath + "txt\imports.txt", importsDataGrid.GetClipboardContent().GetText.TrimEnd)
+
+        importsDataGrid.ClearSelection()
+    End Sub
 
 
 
@@ -50,6 +74,8 @@ Public Class mainForm
         readNotes()
 
         readNumberpass()
+
+        readImports()
     End Sub
 
     Private Sub dailyTasks_Click(sender As Object, e As EventArgs) Handles dailyTasks.Click
@@ -165,5 +191,9 @@ Public Class mainForm
 
     Private Sub openTextSplitter_Click(sender As Object, e As EventArgs) Handles openTextSplitter.Click
         Process.Start(autoPath + "Projects\TextSplitter\TextSplitter\bin\Debug\TextSplitter.exe")
+    End Sub
+
+    Private Sub importsDataGrid_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles importsDataGrid.CellEndEdit
+        writeImports()
     End Sub
 End Class
