@@ -22,6 +22,8 @@ Partial Class mainForm
     'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(mainForm))
         Me.dailyTasks = New System.Windows.Forms.Button()
         Me.zipCatalog1955 = New System.Windows.Forms.Button()
@@ -473,12 +475,16 @@ Partial Class mainForm
         '
         'Size
         '
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.Size.DefaultCellStyle = DataGridViewCellStyle1
         Me.Size.HeaderText = "Size"
         Me.Size.Name = "Size"
         Me.Size.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         '
         'Importname
         '
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        Me.Importname.DefaultCellStyle = DataGridViewCellStyle2
         Me.Importname.HeaderText = "Importname"
         Me.Importname.Name = "Importname"
         Me.Importname.Width = 325
@@ -486,7 +492,7 @@ Partial Class mainForm
         'Information
         '
         Me.Information.HeaderText = "Information"
-        Me.Information.Items.AddRange(New Object() {"Access", "Kein Schattenstamm", "Massenänderung", "Wöchentlich", "Wöchentlich, kein Schattenstamm"})
+        Me.Information.Items.AddRange(New Object() {"Access", "Gateway", "Massenänderung", "Wöchentlich", "Wöchentlich, Gateway"})
         Me.Information.Name = "Information"
         Me.Information.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.Information.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic

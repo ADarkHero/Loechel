@@ -47,7 +47,9 @@
 
         numberpass.SelectAll()
 
-        IO.File.WriteAllText(autoPath + "txt\numberpass.txt", numberpass.GetClipboardContent().GetText.TrimEnd)
+        Dim writetext As String = numberpass.GetClipboardContent().GetText.TrimEnd
+
+        IO.File.WriteAllText(autoPath + "txt\numberpass.txt", writetext)
 
         numberpass.ClearSelection()
     End Sub
@@ -58,7 +60,10 @@
 
         importsDataGrid.SelectAll()
 
-        IO.File.WriteAllText(autoPath + "txt\imports.txt", importsDataGrid.GetClipboardContent().GetText.TrimEnd)
+        Dim writetext As String = importsDataGrid.GetClipboardContent().GetText.TrimEnd
+        writetext = writetext.Substring(0, writetext.Length - 22) 'Deletes last line of the string, else it would save an empty line at the end
+
+        IO.File.WriteAllText(autoPath + "txt\imports.txt", writetext)
 
         importsDataGrid.ClearSelection()
     End Sub
@@ -161,7 +166,7 @@
         Process.Start("Z:\Löchel Industriebedarf\Liste.xlsx")
     End Sub
 
-    Private Sub numberpass_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles numberpass.CellEndEdit
+    Private Sub numberpass_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles numberpass.CellEnter
         writeNumberpass()
     End Sub
 
@@ -193,7 +198,7 @@
         Process.Start(autoPath + "Projects\TextSplitter\TextSplitter\bin\Debug\TextSplitter.exe")
     End Sub
 
-    Private Sub importsDataGrid_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles importsDataGrid.CellEndEdit
+    Private Sub importsDataGrid_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles importsDataGrid.CellEnter
         writeImports()
     End Sub
 End Class
