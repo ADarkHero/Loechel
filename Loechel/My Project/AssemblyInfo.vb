@@ -11,7 +11,7 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyTitle("Loechel")>
 <Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("")>
+<Assembly: AssemblyCompany("Loechel Industriebedarf")>
 <Assembly: AssemblyProduct("Loechel")>
 <Assembly: AssemblyCopyright("©Maik Riedlsperger  2017")>
 <Assembly: AssemblyTrademark("")>

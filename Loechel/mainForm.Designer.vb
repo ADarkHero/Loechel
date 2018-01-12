@@ -38,6 +38,8 @@ Partial Class mainForm
         Me.openLoechelShop = New System.Windows.Forms.Button()
         Me.tabControl = New System.Windows.Forms.TabControl()
         Me.tabPageHome = New System.Windows.Forms.TabPage()
+        Me.openConditionList = New System.Windows.Forms.Button()
+        Me.addLoechelArticles = New System.Windows.Forms.Button()
         Me.openTextSplitter = New System.Windows.Forms.Button()
         Me.openAmazonPriceCalculator = New System.Windows.Forms.Button()
         Me.openProjectsFolder = New System.Windows.Forms.Button()
@@ -58,15 +60,16 @@ Partial Class mainForm
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.tabPageImport = New System.Windows.Forms.TabPage()
         Me.importsDataGrid = New System.Windows.Forms.DataGridView()
-        Me.noteEditor = New System.Windows.Forms.TextBox()
-        Me.saveNotes = New System.Windows.Forms.Button()
-        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
         Me.Size = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Importname = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Information = New System.Windows.Forms.DataGridViewComboBoxColumn()
         Me.Vorbereitet = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.Schattenstamm = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.Komplett = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.noteEditor = New System.Windows.Forms.TextBox()
+        Me.saveNotes = New System.Windows.Forms.Button()
+        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
+        Me.openPictureResizer = New System.Windows.Forms.Button()
         Me.tabControl.SuspendLayout()
         Me.tabPageHome.SuspendLayout()
         Me.tabPagePass.SuspendLayout()
@@ -213,6 +216,9 @@ Partial Class mainForm
         '
         'tabPageHome
         '
+        Me.tabPageHome.Controls.Add(Me.openPictureResizer)
+        Me.tabPageHome.Controls.Add(Me.openConditionList)
+        Me.tabPageHome.Controls.Add(Me.addLoechelArticles)
         Me.tabPageHome.Controls.Add(Me.openTextSplitter)
         Me.tabPageHome.Controls.Add(Me.openAmazonPriceCalculator)
         Me.tabPageHome.Controls.Add(Me.openProjectsFolder)
@@ -242,6 +248,29 @@ Partial Class mainForm
         Me.tabPageHome.TabIndex = 0
         Me.tabPageHome.Text = "Home"
         Me.tabPageHome.UseVisualStyleBackColor = True
+        '
+        'openConditionList
+        '
+        Me.openConditionList.BackColor = System.Drawing.Color.MediumSpringGreen
+        Me.openConditionList.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.openConditionList.Location = New System.Drawing.Point(718, 393)
+        Me.openConditionList.Name = "openConditionList"
+        Me.openConditionList.Size = New System.Drawing.Size(256, 30)
+        Me.openConditionList.TabIndex = 25
+        Me.openConditionList.Text = "Konditionen Liste"
+        Me.openConditionList.UseVisualStyleBackColor = False
+        '
+        'addLoechelArticles
+        '
+        Me.addLoechelArticles.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.addLoechelArticles.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.addLoechelArticles.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.addLoechelArticles.Location = New System.Drawing.Point(0, 334)
+        Me.addLoechelArticles.Name = "addLoechelArticles"
+        Me.addLoechelArticles.Size = New System.Drawing.Size(376, 45)
+        Me.addLoechelArticles.TabIndex = 24
+        Me.addLoechelArticles.Text = "Löchel Shop neue Artikel hinzufügen"
+        Me.addLoechelArticles.UseVisualStyleBackColor = False
         '
         'openTextSplitter
         '
@@ -292,9 +321,9 @@ Partial Class mainForm
         '
         Me.startBreak.BackColor = System.Drawing.Color.MediumSeaGreen
         Me.startBreak.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.startBreak.Location = New System.Drawing.Point(382, 491)
+        Me.startBreak.Location = New System.Drawing.Point(382, 429)
         Me.startBreak.Name = "startBreak"
-        Me.startBreak.Size = New System.Drawing.Size(330, 34)
+        Me.startBreak.Size = New System.Drawing.Size(330, 56)
         Me.startBreak.TabIndex = 18
         Me.startBreak.Text = "Pause"
         Me.startBreak.UseVisualStyleBackColor = False
@@ -349,9 +378,9 @@ Partial Class mainForm
         Me.mercateoLieferzeiten.BackColor = System.Drawing.Color.Salmon
         Me.mercateoLieferzeiten.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.mercateoLieferzeiten.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.mercateoLieferzeiten.Location = New System.Drawing.Point(0, 349)
+        Me.mercateoLieferzeiten.Location = New System.Drawing.Point(382, 491)
         Me.mercateoLieferzeiten.Name = "mercateoLieferzeiten"
-        Me.mercateoLieferzeiten.Size = New System.Drawing.Size(376, 30)
+        Me.mercateoLieferzeiten.Size = New System.Drawing.Size(330, 34)
         Me.mercateoLieferzeiten.TabIndex = 13
         Me.mercateoLieferzeiten.Text = "Lieferzeiten Mercateo"
         Me.mercateoLieferzeiten.UseVisualStyleBackColor = False
@@ -448,31 +477,6 @@ Partial Class mainForm
         Me.importsDataGrid.Size = New System.Drawing.Size(968, 625)
         Me.importsDataGrid.TabIndex = 0
         '
-        'noteEditor
-        '
-        Me.noteEditor.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.noteEditor.Location = New System.Drawing.Point(1006, 186)
-        Me.noteEditor.Multiline = True
-        Me.noteEditor.Name = "noteEditor"
-        Me.noteEditor.Size = New System.Drawing.Size(246, 423)
-        Me.noteEditor.TabIndex = 12
-        '
-        'saveNotes
-        '
-        Me.saveNotes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.saveNotes.Location = New System.Drawing.Point(1006, 625)
-        Me.saveNotes.Name = "saveNotes"
-        Me.saveNotes.Size = New System.Drawing.Size(246, 50)
-        Me.saveNotes.TabIndex = 13
-        Me.saveNotes.Text = "Notiz Speichern"
-        Me.saveNotes.UseVisualStyleBackColor = True
-        '
-        'MonthCalendar1
-        '
-        Me.MonthCalendar1.Location = New System.Drawing.Point(1043, 12)
-        Me.MonthCalendar1.Name = "MonthCalendar1"
-        Me.MonthCalendar1.TabIndex = 0
-        '
         'Size
         '
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
@@ -492,7 +496,7 @@ Partial Class mainForm
         'Information
         '
         Me.Information.HeaderText = "Information"
-        Me.Information.Items.AddRange(New Object() {"Access", "Gateway", "Massenänderung", "Wöchentlich", "Wöchentlich, Gateway"})
+        Me.Information.Items.AddRange(New Object() {"Schattenstamm", "Gateway", "Massenänderung", "Access", "Wöchentlich", "Wöchentlich, Gateway"})
         Me.Information.Name = "Information"
         Me.Information.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.Information.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
@@ -518,6 +522,43 @@ Partial Class mainForm
         Me.Komplett.Name = "Komplett"
         Me.Komplett.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.Komplett.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        '
+        'noteEditor
+        '
+        Me.noteEditor.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.noteEditor.Location = New System.Drawing.Point(1006, 186)
+        Me.noteEditor.Multiline = True
+        Me.noteEditor.Name = "noteEditor"
+        Me.noteEditor.Size = New System.Drawing.Size(246, 423)
+        Me.noteEditor.TabIndex = 12
+        '
+        'saveNotes
+        '
+        Me.saveNotes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.saveNotes.Location = New System.Drawing.Point(1006, 625)
+        Me.saveNotes.Name = "saveNotes"
+        Me.saveNotes.Size = New System.Drawing.Size(246, 50)
+        Me.saveNotes.TabIndex = 13
+        Me.saveNotes.Text = "Notiz Speichern"
+        Me.saveNotes.UseVisualStyleBackColor = True
+        '
+        'MonthCalendar1
+        '
+        Me.MonthCalendar1.Location = New System.Drawing.Point(1043, 12)
+        Me.MonthCalendar1.Name = "MonthCalendar1"
+        Me.MonthCalendar1.TabIndex = 0
+        '
+        'openPictureResizer
+        '
+        Me.openPictureResizer.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.openPictureResizer.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.openPictureResizer.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.openPictureResizer.Location = New System.Drawing.Point(0, 303)
+        Me.openPictureResizer.Name = "openPictureResizer"
+        Me.openPictureResizer.Size = New System.Drawing.Size(376, 25)
+        Me.openPictureResizer.TabIndex = 26
+        Me.openPictureResizer.Text = "Bildverkleinerer"
+        Me.openPictureResizer.UseVisualStyleBackColor = False
         '
         'mainForm
         '
@@ -584,4 +625,7 @@ Partial Class mainForm
     Friend WithEvents Vorbereitet As DataGridViewCheckBoxColumn
     Friend WithEvents Schattenstamm As DataGridViewCheckBoxColumn
     Friend WithEvents Komplett As DataGridViewCheckBoxColumn
+    Friend WithEvents addLoechelArticles As Button
+    Friend WithEvents openConditionList As Button
+    Friend WithEvents openPictureResizer As Button
 End Class
