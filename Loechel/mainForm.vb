@@ -112,7 +112,7 @@
     End Sub
 
     Private Sub startEnventaTest_Click(sender As Object, e As EventArgs) Handles startEnventaTest.Click
-        Process.Start(autoPath + "eNVenta\eNVenta -Test.jnlp")
+        Process.Start(autoPath + "eNVenta\enventa_test.bat")
     End Sub
 
     Private Sub openAmazon_Click(sender As Object, e As EventArgs) Handles openAmazon.Click
@@ -196,7 +196,8 @@
     End Sub
 
     Private Sub openTextSplitter_Click(sender As Object, e As EventArgs) Handles openTextSplitter.Click
-        Process.Start(autoPath + "Projects\TextSplitter\TextSplitter\bin\Debug\TextSplitter.exe")
+        Process.Start(autoPath + "exe\CSVSplitter.exe")
+        Process.Start(autoPath + "exe\CSVSplitter.exe")
     End Sub
 
     Private Sub importsDataGrid_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles importsDataGrid.CellEnter
@@ -215,5 +216,25 @@
 
     Private Sub openPictureResizer_Click(sender As Object, e As EventArgs) Handles openPictureResizer.Click
         Process.Start(autoPath + "exe\verkleinerer17b.exe")
+    End Sub
+
+    Private Sub openMoreBreak_Click(sender As Object, e As EventArgs) Handles openMoreBreak.Click
+        Process.Start("C:\Program Files (x86)\GOG Galaxy\Games\Gwent\GwentUp\GwentUp.exe")
+    End Sub
+
+    Private Sub openGYSAHK_Click(sender As Object, e As EventArgs) Handles openGYSAHK.Click
+        Process.Start(autoPath + "ahk\gys.ahk")
+    End Sub
+
+    Private Sub openKemmlerAHK_Click(sender As Object, e As EventArgs) Handles openKemmlerAHK.Click
+        Process.Start(autoPath + "ahk\kemmler.ahk")
+    End Sub
+
+    Private Sub openLandefeldAHK_Click(sender As Object, e As EventArgs) Handles openLandefeldAHK.Click
+        Process.Start(autoPath + "ahk\landfeld_vm.ahk")
+    End Sub
+
+    Private Sub openNordwestAHK_Click(sender As Object, e As EventArgs) Handles openNordwestAHK.Click
+        Process.Start(autoPath + "ahk\nordwest.ahk")
     End Sub
 End Class

@@ -38,6 +38,11 @@ Partial Class mainForm
         Me.openLoechelShop = New System.Windows.Forms.Button()
         Me.tabControl = New System.Windows.Forms.TabControl()
         Me.tabPageHome = New System.Windows.Forms.TabPage()
+        Me.openLandefeldAHK = New System.Windows.Forms.Button()
+        Me.openKemmlerAHK = New System.Windows.Forms.Button()
+        Me.openGYSAHK = New System.Windows.Forms.Button()
+        Me.openMoreBreak = New System.Windows.Forms.Button()
+        Me.openPictureResizer = New System.Windows.Forms.Button()
         Me.openConditionList = New System.Windows.Forms.Button()
         Me.addLoechelArticles = New System.Windows.Forms.Button()
         Me.openTextSplitter = New System.Windows.Forms.Button()
@@ -69,7 +74,7 @@ Partial Class mainForm
         Me.noteEditor = New System.Windows.Forms.TextBox()
         Me.saveNotes = New System.Windows.Forms.Button()
         Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
-        Me.openPictureResizer = New System.Windows.Forms.Button()
+        Me.openNordwestAHK = New System.Windows.Forms.Button()
         Me.tabControl.SuspendLayout()
         Me.tabPageHome.SuspendLayout()
         Me.tabPagePass.SuspendLayout()
@@ -216,6 +221,11 @@ Partial Class mainForm
         '
         'tabPageHome
         '
+        Me.tabPageHome.Controls.Add(Me.openNordwestAHK)
+        Me.tabPageHome.Controls.Add(Me.openLandefeldAHK)
+        Me.tabPageHome.Controls.Add(Me.openKemmlerAHK)
+        Me.tabPageHome.Controls.Add(Me.openGYSAHK)
+        Me.tabPageHome.Controls.Add(Me.openMoreBreak)
         Me.tabPageHome.Controls.Add(Me.openPictureResizer)
         Me.tabPageHome.Controls.Add(Me.openConditionList)
         Me.tabPageHome.Controls.Add(Me.addLoechelArticles)
@@ -249,13 +259,72 @@ Partial Class mainForm
         Me.tabPageHome.Text = "Home"
         Me.tabPageHome.UseVisualStyleBackColor = True
         '
+        'openLandefeldAHK
+        '
+        Me.openLandefeldAHK.BackColor = System.Drawing.Color.PeachPuff
+        Me.openLandefeldAHK.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.openLandefeldAHK.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.openLandefeldAHK.Location = New System.Drawing.Point(792, 334)
+        Me.openLandefeldAHK.Name = "openLandefeldAHK"
+        Me.openLandefeldAHK.Size = New System.Drawing.Size(64, 45)
+        Me.openLandefeldAHK.TabIndex = 30
+        Me.openLandefeldAHK.Text = "Landefeld AHK"
+        Me.openLandefeldAHK.UseVisualStyleBackColor = False
+        '
+        'openKemmlerAHK
+        '
+        Me.openKemmlerAHK.BackColor = System.Drawing.Color.PeachPuff
+        Me.openKemmlerAHK.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.openKemmlerAHK.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.openKemmlerAHK.Location = New System.Drawing.Point(862, 334)
+        Me.openKemmlerAHK.Name = "openKemmlerAHK"
+        Me.openKemmlerAHK.Size = New System.Drawing.Size(58, 45)
+        Me.openKemmlerAHK.TabIndex = 29
+        Me.openKemmlerAHK.Text = "Kemmler AHK"
+        Me.openKemmlerAHK.UseVisualStyleBackColor = False
+        '
+        'openGYSAHK
+        '
+        Me.openGYSAHK.BackColor = System.Drawing.Color.PeachPuff
+        Me.openGYSAHK.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.openGYSAHK.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.openGYSAHK.Location = New System.Drawing.Point(926, 334)
+        Me.openGYSAHK.Name = "openGYSAHK"
+        Me.openGYSAHK.Size = New System.Drawing.Size(48, 45)
+        Me.openGYSAHK.TabIndex = 28
+        Me.openGYSAHK.Text = "GYS AHK"
+        Me.openGYSAHK.UseVisualStyleBackColor = False
+        '
+        'openMoreBreak
+        '
+        Me.openMoreBreak.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.openMoreBreak.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.openMoreBreak.Location = New System.Drawing.Point(382, 385)
+        Me.openMoreBreak.Name = "openMoreBreak"
+        Me.openMoreBreak.Size = New System.Drawing.Size(330, 38)
+        Me.openMoreBreak.TabIndex = 27
+        Me.openMoreBreak.Text = "Mehr Pause"
+        Me.openMoreBreak.UseVisualStyleBackColor = False
+        '
+        'openPictureResizer
+        '
+        Me.openPictureResizer.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.openPictureResizer.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.openPictureResizer.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.openPictureResizer.Location = New System.Drawing.Point(0, 303)
+        Me.openPictureResizer.Name = "openPictureResizer"
+        Me.openPictureResizer.Size = New System.Drawing.Size(376, 25)
+        Me.openPictureResizer.TabIndex = 26
+        Me.openPictureResizer.Text = "Bildverkleinerer"
+        Me.openPictureResizer.UseVisualStyleBackColor = False
+        '
         'openConditionList
         '
         Me.openConditionList.BackColor = System.Drawing.Color.MediumSpringGreen
         Me.openConditionList.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.openConditionList.Location = New System.Drawing.Point(718, 393)
+        Me.openConditionList.Location = New System.Drawing.Point(718, 385)
         Me.openConditionList.Name = "openConditionList"
-        Me.openConditionList.Size = New System.Drawing.Size(256, 30)
+        Me.openConditionList.Size = New System.Drawing.Size(256, 38)
         Me.openConditionList.TabIndex = 25
         Me.openConditionList.Text = "Konditionen Liste"
         Me.openConditionList.UseVisualStyleBackColor = False
@@ -548,17 +617,17 @@ Partial Class mainForm
         Me.MonthCalendar1.Name = "MonthCalendar1"
         Me.MonthCalendar1.TabIndex = 0
         '
-        'openPictureResizer
+        'openNordwestAHK
         '
-        Me.openPictureResizer.BackColor = System.Drawing.Color.CornflowerBlue
-        Me.openPictureResizer.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.openPictureResizer.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.openPictureResizer.Location = New System.Drawing.Point(0, 303)
-        Me.openPictureResizer.Name = "openPictureResizer"
-        Me.openPictureResizer.Size = New System.Drawing.Size(376, 25)
-        Me.openPictureResizer.TabIndex = 26
-        Me.openPictureResizer.Text = "Bildverkleinerer"
-        Me.openPictureResizer.UseVisualStyleBackColor = False
+        Me.openNordwestAHK.BackColor = System.Drawing.Color.PeachPuff
+        Me.openNordwestAHK.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.openNordwestAHK.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.openNordwestAHK.Location = New System.Drawing.Point(718, 334)
+        Me.openNordwestAHK.Name = "openNordwestAHK"
+        Me.openNordwestAHK.Size = New System.Drawing.Size(68, 45)
+        Me.openNordwestAHK.TabIndex = 31
+        Me.openNordwestAHK.Text = "Nordwest AHK"
+        Me.openNordwestAHK.UseVisualStyleBackColor = False
         '
         'mainForm
         '
@@ -628,4 +697,9 @@ Partial Class mainForm
     Friend WithEvents addLoechelArticles As Button
     Friend WithEvents openConditionList As Button
     Friend WithEvents openPictureResizer As Button
+    Friend WithEvents openMoreBreak As Button
+    Friend WithEvents openGYSAHK As Button
+    Friend WithEvents openKemmlerAHK As Button
+    Friend WithEvents openLandefeldAHK As Button
+    Friend WithEvents openNordwestAHK As Button
 End Class
