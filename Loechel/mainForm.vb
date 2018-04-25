@@ -237,4 +237,12 @@
     Private Sub openNordwestAHK_Click(sender As Object, e As EventArgs) Handles openNordwestAHK.Click
         Process.Start(autoPath + "ahk\nordwest.ahk")
     End Sub
+
+    Private Sub startSteamBreak_Click(sender As Object, e As EventArgs) Handles startSteamBreak.Click
+        Process.Start("C:\Program Files (x86)\Steam\Steam.exe")
+    End Sub
+
+    Private Sub openBreakHS_Click(sender As Object, e As EventArgs) Handles openBreakHS.Click
+        Process.Start("C:\Program Files (x86)\Battle.net\Hearthstone\Hearthstone.exe")
+    End Sub
 End Class

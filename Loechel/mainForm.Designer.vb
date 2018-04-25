@@ -38,6 +38,7 @@ Partial Class mainForm
         Me.openLoechelShop = New System.Windows.Forms.Button()
         Me.tabControl = New System.Windows.Forms.TabControl()
         Me.tabPageHome = New System.Windows.Forms.TabPage()
+        Me.openNordwestAHK = New System.Windows.Forms.Button()
         Me.openLandefeldAHK = New System.Windows.Forms.Button()
         Me.openKemmlerAHK = New System.Windows.Forms.Button()
         Me.openGYSAHK = New System.Windows.Forms.Button()
@@ -74,7 +75,8 @@ Partial Class mainForm
         Me.noteEditor = New System.Windows.Forms.TextBox()
         Me.saveNotes = New System.Windows.Forms.Button()
         Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
-        Me.openNordwestAHK = New System.Windows.Forms.Button()
+        Me.startSteamBreak = New System.Windows.Forms.Button()
+        Me.openBreakHS = New System.Windows.Forms.Button()
         Me.tabControl.SuspendLayout()
         Me.tabPageHome.SuspendLayout()
         Me.tabPagePass.SuspendLayout()
@@ -221,6 +223,8 @@ Partial Class mainForm
         '
         'tabPageHome
         '
+        Me.tabPageHome.Controls.Add(Me.openBreakHS)
+        Me.tabPageHome.Controls.Add(Me.startSteamBreak)
         Me.tabPageHome.Controls.Add(Me.openNordwestAHK)
         Me.tabPageHome.Controls.Add(Me.openLandefeldAHK)
         Me.tabPageHome.Controls.Add(Me.openKemmlerAHK)
@@ -258,6 +262,18 @@ Partial Class mainForm
         Me.tabPageHome.TabIndex = 0
         Me.tabPageHome.Text = "Home"
         Me.tabPageHome.UseVisualStyleBackColor = True
+        '
+        'openNordwestAHK
+        '
+        Me.openNordwestAHK.BackColor = System.Drawing.Color.PeachPuff
+        Me.openNordwestAHK.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.openNordwestAHK.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.openNordwestAHK.Location = New System.Drawing.Point(718, 334)
+        Me.openNordwestAHK.Name = "openNordwestAHK"
+        Me.openNordwestAHK.Size = New System.Drawing.Size(68, 45)
+        Me.openNordwestAHK.TabIndex = 31
+        Me.openNordwestAHK.Text = "Nordwest AHK"
+        Me.openNordwestAHK.UseVisualStyleBackColor = False
         '
         'openLandefeldAHK
         '
@@ -392,9 +408,9 @@ Partial Class mainForm
         Me.startBreak.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.startBreak.Location = New System.Drawing.Point(382, 429)
         Me.startBreak.Name = "startBreak"
-        Me.startBreak.Size = New System.Drawing.Size(330, 56)
+        Me.startBreak.Size = New System.Drawing.Size(100, 56)
         Me.startBreak.TabIndex = 18
-        Me.startBreak.Text = "Pause"
+        Me.startBreak.Text = "Pause (GoG)"
         Me.startBreak.UseVisualStyleBackColor = False
         '
         'openPasswordList
@@ -617,17 +633,27 @@ Partial Class mainForm
         Me.MonthCalendar1.Name = "MonthCalendar1"
         Me.MonthCalendar1.TabIndex = 0
         '
-        'openNordwestAHK
+        'startSteamBreak
         '
-        Me.openNordwestAHK.BackColor = System.Drawing.Color.PeachPuff
-        Me.openNordwestAHK.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.openNordwestAHK.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.openNordwestAHK.Location = New System.Drawing.Point(718, 334)
-        Me.openNordwestAHK.Name = "openNordwestAHK"
-        Me.openNordwestAHK.Size = New System.Drawing.Size(68, 45)
-        Me.openNordwestAHK.TabIndex = 31
-        Me.openNordwestAHK.Text = "Nordwest AHK"
-        Me.openNordwestAHK.UseVisualStyleBackColor = False
+        Me.startSteamBreak.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.startSteamBreak.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.startSteamBreak.Location = New System.Drawing.Point(488, 429)
+        Me.startSteamBreak.Name = "startSteamBreak"
+        Me.startSteamBreak.Size = New System.Drawing.Size(118, 56)
+        Me.startSteamBreak.TabIndex = 32
+        Me.startSteamBreak.Text = "Pause (Dampf)"
+        Me.startSteamBreak.UseVisualStyleBackColor = False
+        '
+        'openBreakHS
+        '
+        Me.openBreakHS.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.openBreakHS.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.openBreakHS.Location = New System.Drawing.Point(612, 429)
+        Me.openBreakHS.Name = "openBreakHS"
+        Me.openBreakHS.Size = New System.Drawing.Size(100, 56)
+        Me.openBreakHS.TabIndex = 33
+        Me.openBreakHS.Text = "Pause (HS)"
+        Me.openBreakHS.UseVisualStyleBackColor = False
         '
         'mainForm
         '
@@ -702,4 +728,6 @@ Partial Class mainForm
     Friend WithEvents openKemmlerAHK As Button
     Friend WithEvents openLandefeldAHK As Button
     Friend WithEvents openNordwestAHK As Button
+    Friend WithEvents startSteamBreak As Button
+    Friend WithEvents openBreakHS As Button
 End Class
