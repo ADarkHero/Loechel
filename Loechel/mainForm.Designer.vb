@@ -38,6 +38,8 @@ Partial Class mainForm
         Me.openLoechelShop = New System.Windows.Forms.Button()
         Me.tabControl = New System.Windows.Forms.TabControl()
         Me.tabPageHome = New System.Windows.Forms.TabPage()
+        Me.openBreakHS = New System.Windows.Forms.Button()
+        Me.startSteamBreak = New System.Windows.Forms.Button()
         Me.openNordwestAHK = New System.Windows.Forms.Button()
         Me.openLandefeldAHK = New System.Windows.Forms.Button()
         Me.openKemmlerAHK = New System.Windows.Forms.Button()
@@ -75,8 +77,7 @@ Partial Class mainForm
         Me.noteEditor = New System.Windows.Forms.TextBox()
         Me.saveNotes = New System.Windows.Forms.Button()
         Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
-        Me.startSteamBreak = New System.Windows.Forms.Button()
-        Me.openBreakHS = New System.Windows.Forms.Button()
+        Me.uploadConditionfile = New System.Windows.Forms.Button()
         Me.tabControl.SuspendLayout()
         Me.tabPageHome.SuspendLayout()
         Me.tabPagePass.SuspendLayout()
@@ -138,7 +139,7 @@ Partial Class mainForm
         Me.uploadCatalog2280.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.uploadCatalog2280.Location = New System.Drawing.Point(393, 72)
         Me.uploadCatalog2280.Name = "uploadCatalog2280"
-        Me.uploadCatalog2280.Size = New System.Drawing.Size(125, 60)
+        Me.uploadCatalog2280.Size = New System.Drawing.Size(125, 59)
         Me.uploadCatalog2280.TabIndex = 4
         Me.uploadCatalog2280.Text = "2280 Catalog hochladen"
         Me.uploadCatalog2280.UseVisualStyleBackColor = False
@@ -223,6 +224,7 @@ Partial Class mainForm
         '
         'tabPageHome
         '
+        Me.tabPageHome.Controls.Add(Me.uploadConditionfile)
         Me.tabPageHome.Controls.Add(Me.openBreakHS)
         Me.tabPageHome.Controls.Add(Me.startSteamBreak)
         Me.tabPageHome.Controls.Add(Me.openNordwestAHK)
@@ -262,6 +264,28 @@ Partial Class mainForm
         Me.tabPageHome.TabIndex = 0
         Me.tabPageHome.Text = "Home"
         Me.tabPageHome.UseVisualStyleBackColor = True
+        '
+        'openBreakHS
+        '
+        Me.openBreakHS.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.openBreakHS.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.openBreakHS.Location = New System.Drawing.Point(612, 429)
+        Me.openBreakHS.Name = "openBreakHS"
+        Me.openBreakHS.Size = New System.Drawing.Size(100, 56)
+        Me.openBreakHS.TabIndex = 33
+        Me.openBreakHS.Text = "Pause (HS)"
+        Me.openBreakHS.UseVisualStyleBackColor = False
+        '
+        'startSteamBreak
+        '
+        Me.startSteamBreak.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.startSteamBreak.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.startSteamBreak.Location = New System.Drawing.Point(488, 429)
+        Me.startSteamBreak.Name = "startSteamBreak"
+        Me.startSteamBreak.Size = New System.Drawing.Size(118, 56)
+        Me.startSteamBreak.TabIndex = 32
+        Me.startSteamBreak.Text = "Pause (Dampf)"
+        Me.startSteamBreak.UseVisualStyleBackColor = False
         '
         'openNordwestAHK
         '
@@ -633,27 +657,16 @@ Partial Class mainForm
         Me.MonthCalendar1.Name = "MonthCalendar1"
         Me.MonthCalendar1.TabIndex = 0
         '
-        'startSteamBreak
+        'uploadConditionfile
         '
-        Me.startSteamBreak.BackColor = System.Drawing.Color.MediumSeaGreen
-        Me.startSteamBreak.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.startSteamBreak.Location = New System.Drawing.Point(488, 429)
-        Me.startSteamBreak.Name = "startSteamBreak"
-        Me.startSteamBreak.Size = New System.Drawing.Size(118, 56)
-        Me.startSteamBreak.TabIndex = 32
-        Me.startSteamBreak.Text = "Pause (Dampf)"
-        Me.startSteamBreak.UseVisualStyleBackColor = False
-        '
-        'openBreakHS
-        '
-        Me.openBreakHS.BackColor = System.Drawing.Color.MediumSeaGreen
-        Me.openBreakHS.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.openBreakHS.Location = New System.Drawing.Point(612, 429)
-        Me.openBreakHS.Name = "openBreakHS"
-        Me.openBreakHS.Size = New System.Drawing.Size(100, 56)
-        Me.openBreakHS.TabIndex = 33
-        Me.openBreakHS.Text = "Pause (HS)"
-        Me.openBreakHS.UseVisualStyleBackColor = False
+        Me.uploadConditionfile.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.uploadConditionfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.uploadConditionfile.Location = New System.Drawing.Point(842, 72)
+        Me.uploadConditionfile.Name = "uploadConditionfile"
+        Me.uploadConditionfile.Size = New System.Drawing.Size(132, 59)
+        Me.uploadConditionfile.TabIndex = 34
+        Me.uploadConditionfile.Text = "conditionfile hochladen"
+        Me.uploadConditionfile.UseVisualStyleBackColor = False
         '
         'mainForm
         '
@@ -730,4 +743,5 @@ Partial Class mainForm
     Friend WithEvents openNordwestAHK As Button
     Friend WithEvents startSteamBreak As Button
     Friend WithEvents openBreakHS As Button
+    Friend WithEvents uploadConditionfile As Button
 End Class

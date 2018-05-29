@@ -141,7 +141,6 @@
 
     Private Sub accessODBC_Click(sender As Object, e As EventArgs) Handles accessODBC.Click, accessODBC.Click
         Process.Start("D:\odbc_test.accdb")
-        Process.Start("D:\odbc_test.accdb")
     End Sub
 
     Private Sub mercateoLieferzeiten_Click(sender As Object, e As EventArgs) Handles mercateoLieferzeiten.Click
@@ -197,7 +196,6 @@
 
     Private Sub openTextSplitter_Click(sender As Object, e As EventArgs) Handles openTextSplitter.Click
         Process.Start(autoPath + "exe\CSVSplitter.exe")
-        Process.Start(autoPath + "exe\CSVSplitter.exe")
     End Sub
 
     Private Sub importsDataGrid_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles importsDataGrid.CellEnter
@@ -206,11 +204,9 @@
 
     Private Sub addLoechelArticles_Click(sender As Object, e As EventArgs) Handles addLoechelArticles.Click
         Process.Start("D:\LoechelNWShop.odb")
-        Process.Start("D:\LoechelNWShop.odb")
     End Sub
 
     Private Sub openConditionList_Click(sender As Object, e As EventArgs) Handles openConditionList.Click
-        Process.Start("Z:\Löchel Industriebedarf\Konditionen LI.xlsx")
         Process.Start("Z:\Löchel Industriebedarf\Konditionen LI.xlsx")
     End Sub
 
@@ -244,5 +240,9 @@
 
     Private Sub openBreakHS_Click(sender As Object, e As EventArgs) Handles openBreakHS.Click
         Process.Start("C:\Program Files (x86)\Battle.net\Hearthstone\Hearthstone.exe")
+    End Sub
+
+    Private Sub uploadConditionfile_Click(sender As Object, e As EventArgs) Handles uploadConditionfile.Click
+        Process.Start(autoPath + "WinScp\uploadConditionfile.bat")
     End Sub
 End Class
