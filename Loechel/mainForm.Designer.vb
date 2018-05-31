@@ -38,6 +38,7 @@ Partial Class mainForm
         Me.openLoechelShop = New System.Windows.Forms.Button()
         Me.tabControl = New System.Windows.Forms.TabControl()
         Me.tabPageHome = New System.Windows.Forms.TabPage()
+        Me.uploadConditionfile = New System.Windows.Forms.Button()
         Me.openBreakHS = New System.Windows.Forms.Button()
         Me.startSteamBreak = New System.Windows.Forms.Button()
         Me.openNordwestAHK = New System.Windows.Forms.Button()
@@ -77,7 +78,7 @@ Partial Class mainForm
         Me.noteEditor = New System.Windows.Forms.TextBox()
         Me.saveNotes = New System.Windows.Forms.Button()
         Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
-        Me.uploadConditionfile = New System.Windows.Forms.Button()
+        Me.uploadReturnCondition = New System.Windows.Forms.Button()
         Me.tabControl.SuspendLayout()
         Me.tabPageHome.SuspendLayout()
         Me.tabPagePass.SuspendLayout()
@@ -224,6 +225,7 @@ Partial Class mainForm
         '
         'tabPageHome
         '
+        Me.tabPageHome.Controls.Add(Me.uploadReturnCondition)
         Me.tabPageHome.Controls.Add(Me.uploadConditionfile)
         Me.tabPageHome.Controls.Add(Me.openBreakHS)
         Me.tabPageHome.Controls.Add(Me.startSteamBreak)
@@ -264,6 +266,17 @@ Partial Class mainForm
         Me.tabPageHome.TabIndex = 0
         Me.tabPageHome.Text = "Home"
         Me.tabPageHome.UseVisualStyleBackColor = True
+        '
+        'uploadConditionfile
+        '
+        Me.uploadConditionfile.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.uploadConditionfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.uploadConditionfile.Location = New System.Drawing.Point(788, 71)
+        Me.uploadConditionfile.Name = "uploadConditionfile"
+        Me.uploadConditionfile.Size = New System.Drawing.Size(90, 59)
+        Me.uploadConditionfile.TabIndex = 34
+        Me.uploadConditionfile.Text = "conditionfile hochladen"
+        Me.uploadConditionfile.UseVisualStyleBackColor = False
         '
         'openBreakHS
         '
@@ -475,9 +488,9 @@ Partial Class mainForm
         '
         Me.uploadAvailability.BackColor = System.Drawing.Color.MediumSeaGreen
         Me.uploadAvailability.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.uploadAvailability.Location = New System.Drawing.Point(842, 6)
+        Me.uploadAvailability.Location = New System.Drawing.Point(788, 6)
         Me.uploadAvailability.Name = "uploadAvailability"
-        Me.uploadAvailability.Size = New System.Drawing.Size(132, 60)
+        Me.uploadAvailability.Size = New System.Drawing.Size(186, 60)
         Me.uploadAvailability.TabIndex = 14
         Me.uploadAvailability.Text = "availability-data-catalog hochladen"
         Me.uploadAvailability.UseVisualStyleBackColor = False
@@ -657,16 +670,16 @@ Partial Class mainForm
         Me.MonthCalendar1.Name = "MonthCalendar1"
         Me.MonthCalendar1.TabIndex = 0
         '
-        'uploadConditionfile
+        'uploadReturnCondition
         '
-        Me.uploadConditionfile.BackColor = System.Drawing.Color.MediumSeaGreen
-        Me.uploadConditionfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.uploadConditionfile.Location = New System.Drawing.Point(842, 72)
-        Me.uploadConditionfile.Name = "uploadConditionfile"
-        Me.uploadConditionfile.Size = New System.Drawing.Size(132, 59)
-        Me.uploadConditionfile.TabIndex = 34
-        Me.uploadConditionfile.Text = "conditionfile hochladen"
-        Me.uploadConditionfile.UseVisualStyleBackColor = False
+        Me.uploadReturnCondition.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.uploadReturnCondition.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.uploadReturnCondition.Location = New System.Drawing.Point(884, 71)
+        Me.uploadReturnCondition.Name = "uploadReturnCondition"
+        Me.uploadReturnCondition.Size = New System.Drawing.Size(90, 59)
+        Me.uploadReturnCondition.TabIndex = 35
+        Me.uploadReturnCondition.Text = "returncondition hochladen"
+        Me.uploadReturnCondition.UseVisualStyleBackColor = False
         '
         'mainForm
         '
@@ -744,4 +757,5 @@ Partial Class mainForm
     Friend WithEvents startSteamBreak As Button
     Friend WithEvents openBreakHS As Button
     Friend WithEvents uploadConditionfile As Button
+    Friend WithEvents uploadReturnCondition As Button
 End Class
