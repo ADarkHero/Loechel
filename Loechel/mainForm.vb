@@ -148,7 +148,8 @@
     End Sub
 
     Private Sub uploadAvailability_Click(sender As Object, e As EventArgs) Handles uploadAvailability.Click
-        Process.Start(autoPath + "WinScp\uploadAvailability.bat")
+        Process.Start(autoPath + "WinScp\uploadAvailabilityAndConditions.bat")
+        lastUploadValue.Text = DateTime.Now().ToString()
     End Sub
 
     Private Sub amazonOrders_Click(sender As Object, e As EventArgs) Handles amazonOrders.Click
@@ -218,19 +219,19 @@
         Process.Start("C:\Program Files (x86)\GOG Galaxy\Games\Gwent\GwentUp\GwentUp.exe")
     End Sub
 
-    Private Sub openGYSAHK_Click(sender As Object, e As EventArgs) Handles openGYSAHK.Click
+    Private Sub openGYSAHK_Click(sender As Object, e As EventArgs)
         Process.Start(autoPath + "ahk\gys.ahk")
     End Sub
 
-    Private Sub openKemmlerAHK_Click(sender As Object, e As EventArgs) Handles openKemmlerAHK.Click
+    Private Sub openKemmlerAHK_Click(sender As Object, e As EventArgs)
         Process.Start(autoPath + "ahk\kemmler.ahk")
     End Sub
 
-    Private Sub openLandefeldAHK_Click(sender As Object, e As EventArgs) Handles openLandefeldAHK.Click
+    Private Sub openLandefeldAHK_Click(sender As Object, e As EventArgs)
         Process.Start(autoPath + "ahk\landfeld_vm.ahk")
     End Sub
 
-    Private Sub openNordwestAHK_Click(sender As Object, e As EventArgs) Handles openNordwestAHK.Click
+    Private Sub openNordwestAHK_Click(sender As Object, e As EventArgs)
         Process.Start(autoPath + "ahk\nordwest.ahk")
     End Sub
 
@@ -242,7 +243,18 @@
         Process.Start("C:\Program Files (x86)\Battle.net\Hearthstone\Hearthstone.exe")
     End Sub
 
-    Private Sub uploadConditionfile_Click(sender As Object, e As EventArgs) Handles uploadConditionfile.Click
+    Private Sub uploadConditionfile_Click(sender As Object, e As EventArgs)
         Process.Start(autoPath + "WinScp\uploadConditionfile.bat")
+    End Sub
+
+    Private Sub uploadReturnCondition_Click(sender As Object, e As EventArgs)
+        Process.Start(autoPath + "WinScp\uploadReturnCondition.bat")
+    End Sub
+
+    Private Sub startImageLoader_Click(sender As Object, e As EventArgs) Handles startImageLoader.Click
+        Dim myProcess As New Process
+        myProcess.StartInfo.WorkingDirectory = autoPath + "Projects\ImageLoader\ImageLoader\bin\Debug\"
+        myProcess.StartInfo.FileName = autoPath + "Projects\ImageLoader\ImageLoader\bin\Debug\ImageLoader.exe"
+        myProcess.Start()
     End Sub
 End Class

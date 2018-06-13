@@ -38,13 +38,10 @@ Partial Class mainForm
         Me.openLoechelShop = New System.Windows.Forms.Button()
         Me.tabControl = New System.Windows.Forms.TabControl()
         Me.tabPageHome = New System.Windows.Forms.TabPage()
-        Me.uploadConditionfile = New System.Windows.Forms.Button()
+        Me.lastUploadValue = New System.Windows.Forms.Label()
+        Me.startImageLoader = New System.Windows.Forms.Button()
         Me.openBreakHS = New System.Windows.Forms.Button()
         Me.startSteamBreak = New System.Windows.Forms.Button()
-        Me.openNordwestAHK = New System.Windows.Forms.Button()
-        Me.openLandefeldAHK = New System.Windows.Forms.Button()
-        Me.openKemmlerAHK = New System.Windows.Forms.Button()
-        Me.openGYSAHK = New System.Windows.Forms.Button()
         Me.openMoreBreak = New System.Windows.Forms.Button()
         Me.openPictureResizer = New System.Windows.Forms.Button()
         Me.openConditionList = New System.Windows.Forms.Button()
@@ -78,7 +75,6 @@ Partial Class mainForm
         Me.noteEditor = New System.Windows.Forms.TextBox()
         Me.saveNotes = New System.Windows.Forms.Button()
         Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
-        Me.uploadReturnCondition = New System.Windows.Forms.Button()
         Me.tabControl.SuspendLayout()
         Me.tabPageHome.SuspendLayout()
         Me.tabPagePass.SuspendLayout()
@@ -225,14 +221,10 @@ Partial Class mainForm
         '
         'tabPageHome
         '
-        Me.tabPageHome.Controls.Add(Me.uploadReturnCondition)
-        Me.tabPageHome.Controls.Add(Me.uploadConditionfile)
+        Me.tabPageHome.Controls.Add(Me.lastUploadValue)
+        Me.tabPageHome.Controls.Add(Me.startImageLoader)
         Me.tabPageHome.Controls.Add(Me.openBreakHS)
         Me.tabPageHome.Controls.Add(Me.startSteamBreak)
-        Me.tabPageHome.Controls.Add(Me.openNordwestAHK)
-        Me.tabPageHome.Controls.Add(Me.openLandefeldAHK)
-        Me.tabPageHome.Controls.Add(Me.openKemmlerAHK)
-        Me.tabPageHome.Controls.Add(Me.openGYSAHK)
         Me.tabPageHome.Controls.Add(Me.openMoreBreak)
         Me.tabPageHome.Controls.Add(Me.openPictureResizer)
         Me.tabPageHome.Controls.Add(Me.openConditionList)
@@ -267,16 +259,30 @@ Partial Class mainForm
         Me.tabPageHome.Text = "Home"
         Me.tabPageHome.UseVisualStyleBackColor = True
         '
-        'uploadConditionfile
+        'lastUploadValue
         '
-        Me.uploadConditionfile.BackColor = System.Drawing.Color.MediumSeaGreen
-        Me.uploadConditionfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.uploadConditionfile.Location = New System.Drawing.Point(788, 71)
-        Me.uploadConditionfile.Name = "uploadConditionfile"
-        Me.uploadConditionfile.Size = New System.Drawing.Size(90, 59)
-        Me.uploadConditionfile.TabIndex = 34
-        Me.uploadConditionfile.Text = "conditionfile hochladen"
-        Me.uploadConditionfile.UseVisualStyleBackColor = False
+        Me.lastUploadValue.AutoSize = True
+        Me.lastUploadValue.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.lastUploadValue.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lastUploadValue.Location = New System.Drawing.Point(791, 116)
+        Me.lastUploadValue.MinimumSize = New System.Drawing.Size(180, 0)
+        Me.lastUploadValue.Name = "lastUploadValue"
+        Me.lastUploadValue.Size = New System.Drawing.Size(180, 13)
+        Me.lastUploadValue.TabIndex = 38
+        Me.lastUploadValue.Text = "Noch nicht hochgeladen!"
+        Me.lastUploadValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'startImageLoader
+        '
+        Me.startImageLoader.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.startImageLoader.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.startImageLoader.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.startImageLoader.Location = New System.Drawing.Point(0, 272)
+        Me.startImageLoader.Name = "startImageLoader"
+        Me.startImageLoader.Size = New System.Drawing.Size(376, 25)
+        Me.startImageLoader.TabIndex = 36
+        Me.startImageLoader.Text = "Bilddieb"
+        Me.startImageLoader.UseVisualStyleBackColor = False
         '
         'openBreakHS
         '
@@ -299,54 +305,6 @@ Partial Class mainForm
         Me.startSteamBreak.TabIndex = 32
         Me.startSteamBreak.Text = "Pause (Dampf)"
         Me.startSteamBreak.UseVisualStyleBackColor = False
-        '
-        'openNordwestAHK
-        '
-        Me.openNordwestAHK.BackColor = System.Drawing.Color.PeachPuff
-        Me.openNordwestAHK.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.openNordwestAHK.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.openNordwestAHK.Location = New System.Drawing.Point(718, 334)
-        Me.openNordwestAHK.Name = "openNordwestAHK"
-        Me.openNordwestAHK.Size = New System.Drawing.Size(68, 45)
-        Me.openNordwestAHK.TabIndex = 31
-        Me.openNordwestAHK.Text = "Nordwest AHK"
-        Me.openNordwestAHK.UseVisualStyleBackColor = False
-        '
-        'openLandefeldAHK
-        '
-        Me.openLandefeldAHK.BackColor = System.Drawing.Color.PeachPuff
-        Me.openLandefeldAHK.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.openLandefeldAHK.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.openLandefeldAHK.Location = New System.Drawing.Point(792, 334)
-        Me.openLandefeldAHK.Name = "openLandefeldAHK"
-        Me.openLandefeldAHK.Size = New System.Drawing.Size(64, 45)
-        Me.openLandefeldAHK.TabIndex = 30
-        Me.openLandefeldAHK.Text = "Landefeld AHK"
-        Me.openLandefeldAHK.UseVisualStyleBackColor = False
-        '
-        'openKemmlerAHK
-        '
-        Me.openKemmlerAHK.BackColor = System.Drawing.Color.PeachPuff
-        Me.openKemmlerAHK.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.openKemmlerAHK.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.openKemmlerAHK.Location = New System.Drawing.Point(862, 334)
-        Me.openKemmlerAHK.Name = "openKemmlerAHK"
-        Me.openKemmlerAHK.Size = New System.Drawing.Size(58, 45)
-        Me.openKemmlerAHK.TabIndex = 29
-        Me.openKemmlerAHK.Text = "Kemmler AHK"
-        Me.openKemmlerAHK.UseVisualStyleBackColor = False
-        '
-        'openGYSAHK
-        '
-        Me.openGYSAHK.BackColor = System.Drawing.Color.PeachPuff
-        Me.openGYSAHK.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.openGYSAHK.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.openGYSAHK.Location = New System.Drawing.Point(926, 334)
-        Me.openGYSAHK.Name = "openGYSAHK"
-        Me.openGYSAHK.Size = New System.Drawing.Size(48, 45)
-        Me.openGYSAHK.TabIndex = 28
-        Me.openGYSAHK.Text = "GYS AHK"
-        Me.openGYSAHK.UseVisualStyleBackColor = False
         '
         'openMoreBreak
         '
@@ -490,9 +448,9 @@ Partial Class mainForm
         Me.uploadAvailability.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.uploadAvailability.Location = New System.Drawing.Point(788, 6)
         Me.uploadAvailability.Name = "uploadAvailability"
-        Me.uploadAvailability.Size = New System.Drawing.Size(186, 60)
+        Me.uploadAvailability.Size = New System.Drawing.Size(186, 125)
         Me.uploadAvailability.TabIndex = 14
-        Me.uploadAvailability.Text = "availability-data-catalog hochladen"
+        Me.uploadAvailability.Text = "availability-data-catalog " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "conditionfile" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "returncondition" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "hochladen"
         Me.uploadAvailability.UseVisualStyleBackColor = False
         '
         'mercateoLieferzeiten
@@ -670,17 +628,6 @@ Partial Class mainForm
         Me.MonthCalendar1.Name = "MonthCalendar1"
         Me.MonthCalendar1.TabIndex = 0
         '
-        'uploadReturnCondition
-        '
-        Me.uploadReturnCondition.BackColor = System.Drawing.Color.MediumSeaGreen
-        Me.uploadReturnCondition.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.uploadReturnCondition.Location = New System.Drawing.Point(884, 71)
-        Me.uploadReturnCondition.Name = "uploadReturnCondition"
-        Me.uploadReturnCondition.Size = New System.Drawing.Size(90, 59)
-        Me.uploadReturnCondition.TabIndex = 35
-        Me.uploadReturnCondition.Text = "returncondition hochladen"
-        Me.uploadReturnCondition.UseVisualStyleBackColor = False
-        '
         'mainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -695,6 +642,7 @@ Partial Class mainForm
         Me.Text = "Löchel Industriebedarf"
         Me.tabControl.ResumeLayout(False)
         Me.tabPageHome.ResumeLayout(False)
+        Me.tabPageHome.PerformLayout()
         Me.tabPagePass.ResumeLayout(False)
         CType(Me.numberpass, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tabPageImport.ResumeLayout(False)
@@ -750,12 +698,8 @@ Partial Class mainForm
     Friend WithEvents openConditionList As Button
     Friend WithEvents openPictureResizer As Button
     Friend WithEvents openMoreBreak As Button
-    Friend WithEvents openGYSAHK As Button
-    Friend WithEvents openKemmlerAHK As Button
-    Friend WithEvents openLandefeldAHK As Button
-    Friend WithEvents openNordwestAHK As Button
     Friend WithEvents startSteamBreak As Button
     Friend WithEvents openBreakHS As Button
-    Friend WithEvents uploadConditionfile As Button
-    Friend WithEvents uploadReturnCondition As Button
+    Friend WithEvents startImageLoader As Button
+    Friend WithEvents lastUploadValue As Label
 End Class
