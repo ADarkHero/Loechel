@@ -257,4 +257,11 @@
         myProcess.StartInfo.FileName = autoPath + "Projects\ImageLoader\ImageLoader\bin\Debug\ImageLoader.exe"
         myProcess.Start()
     End Sub
+
+    Private Sub openQueryMaster_Click(sender As Object, e As EventArgs) Handles openQueryMaster.Click
+        Dim myProcess As New Process
+        myProcess.StartInfo.WorkingDirectory = autoPath + "Projects\QueryMaster\QueryMaster\bin\Debug"
+        myProcess.StartInfo.FileName = autoPath + "Projects\QueryMaster\QueryMaster\bin\Debug\QueryMaster.exe"
+        myProcess.Start()
+    End Sub
 End Class

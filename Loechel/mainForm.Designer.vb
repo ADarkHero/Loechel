@@ -75,6 +75,7 @@ Partial Class mainForm
         Me.noteEditor = New System.Windows.Forms.TextBox()
         Me.saveNotes = New System.Windows.Forms.Button()
         Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
+        Me.openQueryMaster = New System.Windows.Forms.Button()
         Me.tabControl.SuspendLayout()
         Me.tabPageHome.SuspendLayout()
         Me.tabPagePass.SuspendLayout()
@@ -221,6 +222,7 @@ Partial Class mainForm
         '
         'tabPageHome
         '
+        Me.tabPageHome.Controls.Add(Me.openQueryMaster)
         Me.tabPageHome.Controls.Add(Me.lastUploadValue)
         Me.tabPageHome.Controls.Add(Me.startImageLoader)
         Me.tabPageHome.Controls.Add(Me.openBreakHS)
@@ -288,7 +290,7 @@ Partial Class mainForm
         '
         Me.openBreakHS.BackColor = System.Drawing.Color.MediumSeaGreen
         Me.openBreakHS.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.openBreakHS.Location = New System.Drawing.Point(612, 429)
+        Me.openBreakHS.Location = New System.Drawing.Point(612, 367)
         Me.openBreakHS.Name = "openBreakHS"
         Me.openBreakHS.Size = New System.Drawing.Size(100, 56)
         Me.openBreakHS.TabIndex = 33
@@ -299,7 +301,7 @@ Partial Class mainForm
         '
         Me.startSteamBreak.BackColor = System.Drawing.Color.MediumSeaGreen
         Me.startSteamBreak.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.startSteamBreak.Location = New System.Drawing.Point(488, 429)
+        Me.startSteamBreak.Location = New System.Drawing.Point(488, 367)
         Me.startSteamBreak.Name = "startSteamBreak"
         Me.startSteamBreak.Size = New System.Drawing.Size(118, 56)
         Me.startSteamBreak.TabIndex = 32
@@ -310,7 +312,7 @@ Partial Class mainForm
         '
         Me.openMoreBreak.BackColor = System.Drawing.Color.MediumSeaGreen
         Me.openMoreBreak.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.openMoreBreak.Location = New System.Drawing.Point(382, 385)
+        Me.openMoreBreak.Location = New System.Drawing.Point(382, 323)
         Me.openMoreBreak.Name = "openMoreBreak"
         Me.openMoreBreak.Size = New System.Drawing.Size(330, 38)
         Me.openMoreBreak.TabIndex = 27
@@ -379,9 +381,9 @@ Partial Class mainForm
         '
         Me.openProjectsFolder.BackColor = System.Drawing.Color.Gold
         Me.openProjectsFolder.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.openProjectsFolder.Location = New System.Drawing.Point(382, 531)
+        Me.openProjectsFolder.Location = New System.Drawing.Point(382, 465)
         Me.openProjectsFolder.Name = "openProjectsFolder"
-        Me.openProjectsFolder.Size = New System.Drawing.Size(330, 34)
+        Me.openProjectsFolder.Size = New System.Drawing.Size(330, 60)
         Me.openProjectsFolder.TabIndex = 21
         Me.openProjectsFolder.Text = "Projects Folder"
         Me.openProjectsFolder.UseVisualStyleBackColor = False
@@ -401,7 +403,7 @@ Partial Class mainForm
         '
         Me.startBreak.BackColor = System.Drawing.Color.MediumSeaGreen
         Me.startBreak.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.startBreak.Location = New System.Drawing.Point(382, 429)
+        Me.startBreak.Location = New System.Drawing.Point(382, 367)
         Me.startBreak.Name = "startBreak"
         Me.startBreak.Size = New System.Drawing.Size(100, 56)
         Me.startBreak.TabIndex = 18
@@ -458,9 +460,9 @@ Partial Class mainForm
         Me.mercateoLieferzeiten.BackColor = System.Drawing.Color.Salmon
         Me.mercateoLieferzeiten.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.mercateoLieferzeiten.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.mercateoLieferzeiten.Location = New System.Drawing.Point(382, 491)
+        Me.mercateoLieferzeiten.Location = New System.Drawing.Point(382, 429)
         Me.mercateoLieferzeiten.Name = "mercateoLieferzeiten"
-        Me.mercateoLieferzeiten.Size = New System.Drawing.Size(330, 34)
+        Me.mercateoLieferzeiten.Size = New System.Drawing.Size(330, 30)
         Me.mercateoLieferzeiten.TabIndex = 13
         Me.mercateoLieferzeiten.Text = "Lieferzeiten Mercateo"
         Me.mercateoLieferzeiten.UseVisualStyleBackColor = False
@@ -628,6 +630,18 @@ Partial Class mainForm
         Me.MonthCalendar1.Name = "MonthCalendar1"
         Me.MonthCalendar1.TabIndex = 0
         '
+        'openQueryMaster
+        '
+        Me.openQueryMaster.BackColor = System.Drawing.Color.Orchid
+        Me.openQueryMaster.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.openQueryMaster.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.openQueryMaster.Location = New System.Drawing.Point(382, 531)
+        Me.openQueryMaster.Name = "openQueryMaster"
+        Me.openQueryMaster.Size = New System.Drawing.Size(330, 34)
+        Me.openQueryMaster.TabIndex = 39
+        Me.openQueryMaster.Text = "Query Master"
+        Me.openQueryMaster.UseVisualStyleBackColor = False
+        '
         'mainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -702,4 +716,5 @@ Partial Class mainForm
     Friend WithEvents openBreakHS As Button
     Friend WithEvents startImageLoader As Button
     Friend WithEvents lastUploadValue As Label
+    Friend WithEvents openQueryMaster As Button
 End Class
